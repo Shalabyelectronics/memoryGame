@@ -34,8 +34,12 @@ function creatCards() {
 //set up the event listener for a card. If a card is clicked:
 function clicked(card) {
   card.addEventListener("click", function() {
-    console.log(this.innerHTML);
+    flipcard(this);
   });
+}
+
+function flipcard(card) {
+  card.classList.add("open", "show");
 }
 
 function gameInit() {
