@@ -2,6 +2,7 @@
  * Create a list that holds all of your cards
  */
 const cardsContainer = document.querySelector(".deck");
+let openCards = [];
 const allCards = [
   "fa fa-diamond",
   "fa fa-diamond",
@@ -35,11 +36,16 @@ function creatCards() {
 function clicked(card) {
   card.addEventListener("click", function() {
     flipcard(this);
+    openedCards(this);
   });
 }
 
 function flipcard(card) {
   card.classList.add("open", "show");
+}
+
+function openedCards(card) {
+  openCards.push(card.innerHTML);
 }
 
 function gameInit() {
