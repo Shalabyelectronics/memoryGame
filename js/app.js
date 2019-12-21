@@ -30,6 +30,14 @@ function creatCards() {
   }
 }
 
+//set up the event listener for a card. If a card is clicked:
+function clicked(){
+    card.addEventListener('click', function{
+        console.log(card.innerHTML);
+    })
+
+}
+
 function gameInit() {
   shuffle(allCards);
   creatCards();
@@ -60,7 +68,7 @@ function shuffle(allCards) {
 }
 
 /*
- * set up the event listener for a card. If a card is clicked:
+ * 
 
  *  - display the card's symbol (put this functionality in another function that you call from this one)
  *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
