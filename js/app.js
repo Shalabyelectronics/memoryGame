@@ -27,6 +27,9 @@ function creatCards() {
     card.classList.add("card");
     card.innerHTML = `<li class= "${allCards[i]}"></i>`;
     cardsContainer.appendChild(card);
+    card.addEventListener("click", function() {
+      console.log(this.innerHTML);
+    });
   }
 }
 
